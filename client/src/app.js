@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import { Provider } from 'react-redux';
-import Store from './utils/store';
+import store from './utils/store';
 
 import home from "./pages/home";
 import detail from "./pages/detail";
@@ -32,7 +32,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Provider store={Store}>
+          <Provider store={store}>
             <Nav />
             <Switch>
               <Route exact path="/" component={home} />
